@@ -1,0 +1,15 @@
+{
+  "name": "gds-sprint-15-grid",
+  "version": "0.0.0",
+  "description": "Sprint 15 grid - 12 x 12 data grid for use at BFI",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.10.7",
+    "nodemon": "^1.2.1",
+    "request": "^2.51.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Demotive/gds-sprint-15-grid.git"
+  }
+}

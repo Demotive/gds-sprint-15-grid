@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>Scamp</title>
+    <link rel="stylesheet" href="/bower_components/chartist/dist/chartist.min.css">
+    <script src="/bower_components/chartist/dist/chartist.min.js"></script>
+    <style type="text/css">
+      .panel {
+        width: 25%;
+        height: 33%;
+        position: absolute;
+      }
+      .pos-1 {
+        left: 0;
+        top: 0;
+        background-color: AliceBlue;
+      }
+      .pos-2 {
+        left: 25%;
+        top: 0;
+        background-color: AntiqueWhite;
+      }
+      .pos-3 {
+        left: 50%;
+        top: 0;
+        background-color: Aqua;
+      }
+      .pos-4 {
+        left: 75%;
+        top: 0;
+        background-color: Aquamarine;
+      }
+      .pos-5 {
+        left: 0;
+        top: 33%;
+        background-color: Azure;
+      }
+      .pos-6 {
+        left: 25%;
+        top: 33%;
+        background-color: Beige;
+      }
+      .pos-7 {
+        left: 50%;
+        top: 33%;
+        background-color: Bisque;
+      }
+      .pos-8 {
+        left: 75%;
+        top: 33%;
+        background-color: Black;
+      }
+      .pos-9 {
+        left: 0;
+        top: 66%;
+        background-color: BlanchedAlmond;
+      }
+      .pos-10 {
+        left: 25%;
+        top: 66%;
+        background-color: Blue;
+      }
+      .pos-11 {
+        left: 50%;
+        top: 66%;
+        background-color: BlueViolet;
+      }
+      .pos-12 {
+        left: 75%;
+        top: 66%;
+        background-color: Brown;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="panel pos-1 ct-chart chart-1"></div>
+    <div class="panel pos-2 ct-chart chart-2"></div>
+    <div class="panel pos-3"></div>
+    <div class="panel pos-4"></div>
+    <div class="panel pos-5"></div>
+    <div class="panel pos-6"></div>
+    <div class="panel pos-7"></div>
+    <div class="panel pos-8"></div>
+    <div class="panel pos-9"></div>
+    <div class="panel pos-10"></div>
+    <div class="panel pos-11"></div>
+    <div class="panel pos-12"></div>
+
+    <script type="text/javascript">
+      // Create a simple line chart
+      var data = {
+        // A labels array that can contain any sort of values
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        // Our series array that contains series objects or in this case series data arrays
+        series: [
+          [5, 2, 4, 2, 0]
+        ]
+      };
+      // As options we currently only set a static size of 300x200 px
+      var options = {
+        axisX : {
+          showLabel: false,
+          showGrid: false
+        },
+        axisY : {
+          showLabel: false,
+          showGrid: false
+        },
+        showPoint: false,
+        chartPadding: 0
+      };
+      // In the global name space Chartist we call the Line function to initialize a line chart. As a first parameter we pass in a selector where we would like to get our chart created. Second parameter is the actual data object and as a third parameter we pass in our options
+      new Chartist.Line('.chart-1', data, options);
+
+      var data = {
+        series: [75, 25]
+      };
+
+      var sum = function(a, b) { return a + b };
+
+      new Chartist.Pie('.chart-2', data, {
+        donut: true,
+        donutWidth: 20,
+        showLabel: false,
+        chartPadding: 20
+      });
+
+
+    </script>
+  </body>
+</html>
