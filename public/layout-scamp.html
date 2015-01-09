@@ -2,81 +2,23 @@
   <head>
     <title>Scamp</title>
     <link rel="stylesheet" href="/bower_components/chartist/dist/chartist.min.css">
-    <script src="/bower_components/chartist/dist/chartist.min.js"></script>
-    <style type="text/css">
-      .panel {
-        width: 25%;
-        height: 33%;
-        position: absolute;
-      }
-      .pos-1 {
-        left: 0;
-        top: 0;
-        background-color: AliceBlue;
-      }
-      .pos-2 {
-        left: 25%;
-        top: 0;
-        background-color: AntiqueWhite;
-      }
-      .pos-3 {
-        left: 50%;
-        top: 0;
-        background-color: Aqua;
-      }
-      .pos-4 {
-        left: 75%;
-        top: 0;
-        background-color: Aquamarine;
-      }
-      .pos-5 {
-        left: 0;
-        top: 33%;
-        background-color: Azure;
-      }
-      .pos-6 {
-        left: 25%;
-        top: 33%;
-        background-color: Beige;
-      }
-      .pos-7 {
-        left: 50%;
-        top: 33%;
-        background-color: Bisque;
-      }
-      .pos-8 {
-        left: 75%;
-        top: 33%;
-        background-color: Black;
-      }
-      .pos-9 {
-        left: 0;
-        top: 66%;
-        background-color: BlanchedAlmond;
-      }
-      .pos-10 {
-        left: 25%;
-        top: 66%;
-        background-color: Blue;
-      }
-      .pos-11 {
-        left: 50%;
-        top: 66%;
-        background-color: BlueViolet;
-      }
-      .pos-12 {
-        left: 75%;
-        top: 66%;
-        background-color: Brown;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/application.css">
   </head>
   <body>
 
     <div class="panel pos-1 ct-chart chart-1"></div>
     <div class="panel pos-2 ct-chart chart-2"></div>
-    <div class="panel pos-3"></div>
-    <div class="panel pos-4"></div>
+    <div class="panel pos-3">
+      <section class="container">
+        <div id="card">
+          <div class="figure front">1</div>
+          <div class="figure back">2</div>
+        </div>
+      </section>
+    </div>
+    <div class="panel pos-4">
+      <span id="flip">Flip</span>
+    </div>
     <div class="panel pos-5"></div>
     <div class="panel pos-6"></div>
     <div class="panel pos-7"></div>
@@ -86,6 +28,44 @@
     <div class="panel pos-11"></div>
     <div class="panel pos-12"></div>
 
+    <script type="text/javascript">
+      // ======================= DOM Utility Functions from PastryKit =============================== //
+
+      // Sure, we could use jQuery or XUI for these, 
+      // but these are concise and will work with plain vanilla JS
+
+      Element.prototype.hasClassName = function (a) {
+          return new RegExp("(?:^|\\s+)" + a + "(?:\\s+|$)").test(this.className);
+      };
+
+      Element.prototype.addClassName = function (a) {
+          if (!this.hasClassName(a)) {
+              this.className = [this.className, a].join(" ");
+          }
+      };
+
+      Element.prototype.removeClassName = function (b) {
+          if (this.hasClassName(b)) {
+              var a = this.className;
+              this.className = a.replace(new RegExp("(?:^|\\s+)" + b + "(?:\\s+|$)", "g"), " ");
+          }
+      };
+
+      Element.prototype.toggleClassName = function (a) {
+        this[this.hasClassName(a) ? "removeClassName" : "addClassName"](a);
+      };
+
+      var init = function() {
+        var card = document.getElementById('card');
+        document.getElementById('flip').addEventListener( 'click', function(){
+          card.toggleClassName('flipped');
+        }, false);
+      };
+
+      window.addEventListener('DOMContentLoaded', init, false);
+    </script>
+
+    <script src="/bower_components/chartist/dist/chartist.min.js"></script>
     <script type="text/javascript">
       // Create a simple line chart
       var data = {
