@@ -28,44 +28,9 @@
     <div class="panel pos-11"></div>
     <div class="panel pos-12"></div>
 
-    <script type="text/javascript">
-      // ======================= DOM Utility Functions from PastryKit =============================== //
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/bower_components/chartist/dist/chartist.min.js"></script>
 
-      // Sure, we could use jQuery or XUI for these, 
-      // but these are concise and will work with plain vanilla JS
-
-      Element.prototype.hasClassName = function (a) {
-          return new RegExp("(?:^|\\s+)" + a + "(?:\\s+|$)").test(this.className);
-      };
-
-      Element.prototype.addClassName = function (a) {
-          if (!this.hasClassName(a)) {
-              this.className = [this.className, a].join(" ");
-          }
-      };
-
-      Element.prototype.removeClassName = function (b) {
-          if (this.hasClassName(b)) {
-              var a = this.className;
-              this.className = a.replace(new RegExp("(?:^|\\s+)" + b + "(?:\\s+|$)", "g"), " ");
-          }
-      };
-
-      Element.prototype.toggleClassName = function (a) {
-        this[this.hasClassName(a) ? "removeClassName" : "addClassName"](a);
-      };
-
-      var init = function() {
-        var card = document.getElementById('card');
-        document.getElementById('flip').addEventListener( 'click', function(){
-          card.toggleClassName('flipped');
-        }, false);
-      };
-
-      window.addEventListener('DOMContentLoaded', init, false);
-    </script>
-
-    <script src="/bower_components/chartist/dist/chartist.min.js"></script>
     <script type="text/javascript">
       // Create a simple line chart
       var data = {
@@ -105,7 +70,24 @@
         chartPadding: 20
       });
 
+    </script>
 
+    <script type="text/javascript">
+      // css flip sketch
+      var init = function() {
+        var card = $('#card');
+        var rotation = 0;
+        $(document).on('click', '#flip', function() {
+          rotation = rotation + 180;
+          card.css({
+            transform: 'rotateY(' + (rotation) + 'deg)'
+          });
+        });
+      };
+
+      $(function() {
+        init();
+      });
     </script>
   </body>
 </html>
