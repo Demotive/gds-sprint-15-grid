@@ -1,12 +1,41 @@
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
+    sass: {
+      dist: {
+        files: {
+          'public/css/application.css': 'public/scss/application.scss'
+        }
+      }
+    },
+    watch: {
+      files: ['public/scss/*'],
+      tasks: ['sass:dist']
+    },
+    nodemon: {
+      dev: {
+        script: 'app.js'
+      }
+    },
+    concurrent: {
+        target: {
+            tasks: ['watch', 'nodemon'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
+    }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  [
+    'grunt-contrib-watch',
+    'grunt-contrib-sass',
+    'grunt-nodemon',
+    'grunt-concurrent'
+  ].forEach(function (task) {
+    grunt.loadNpmTasks(task);
+  });
 
-  // Default task(s).
-  grunt.registerTask('default', ['']);
+  grunt.registerTask('default', ['concurrent']);
 
 };
