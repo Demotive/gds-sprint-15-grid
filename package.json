@@ -11,5 +11,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Demotive/gds-sprint-15-grid.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
   }
 }
