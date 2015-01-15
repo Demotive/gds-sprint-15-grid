@@ -13,6 +13,7 @@
     "url": "https://github.com/Demotive/gds-sprint-15-grid.git"
   },
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-contrib-sass": "^0.8.1"
   }
 }
