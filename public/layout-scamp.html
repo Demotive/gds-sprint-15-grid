@@ -5,27 +5,100 @@
   </head>
   <body>
 
-    <div class="panel pos-1 ct-chart chart-1"></div>
-    <div class="panel pos-2 ct-chart chart-2"></div>
-    <div class="panel pos-3">
-      <section class="container">
-        <div id="card">
-          <div class="figure front">1</div>
-          <div class="figure back">2</div>
+    <div class="panel pos-1">
+      <div class="container icon-line">
+        <div class="title">
+          Lasting power of attorney<br>
+          User satisfaction
         </div>
-      </section>
+        <div class="line ct-chart chart-1"></div>
+      </div>
     </div>
+
+    <div class="panel pos-2">
+      <div class="container icon-pie">
+        <div class="title">
+          Lasting power of attorney<br>
+          User satisfaction
+        </div>
+        <div class="pie ct-chart chart-2"></div>
+        <div class="figure">00%</div>
+      </div>
+    </div>
+
+    <div class="panel pos-3">
+      <div class="container">
+        <div id="card">
+          <div class="card front-face">
+            <div class="icon-figure">
+              <div class="title">
+                Lasting power of attorney<br>
+                Users online now
+              </div>
+              <div class="image">
+                <img src="/images/car.svg">
+              </div>
+              <div class="figure">0000</div>
+            </div>
+          </div>
+          <div class="card back-face">
+            <div class="icon-figure">
+              <div class="title">
+                Lasting power of attorney<br>
+                User satisfaction
+              </div>
+              <div class="image">
+                <img src="/images/car.svg">
+              </div>
+              <div class="figure">00%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="panel pos-4">
-      <span id="flip">Flip</span>
+      <div class="container">
+        <span id="flip">Flip</span>
+      </div>
     </div>
-    <div class="panel pos-5"></div>
+
+    <div class="panel pos-5">
+      <div class="container large-figure">
+        <div class="title">
+          GOV.UK<br>
+          Visitors last week
+        </div>
+        <div class="figure">12,138,750</div>
+      </div>
+    </div>
+
     <div class="panel pos-6"></div>
+
     <div class="panel pos-7"></div>
+
     <div class="panel pos-8"></div>
+
     <div class="panel pos-9"></div>
+
     <div class="panel pos-10"></div>
+
     <div class="panel pos-11"></div>
-    <div class="panel pos-12"></div>
+
+    <div class="panel pos-12">
+      <div class="icon-figure">
+        <div class="title">
+          Lasting power of attorney<br>
+          Users online now
+        </div>
+        <div class="image">
+          <img src="/images/car.svg">
+        </div>
+        <div class="figure">0000</div>
+      </div>
+    </div>
+
+    <div id="performance-link">Powered by www.gov.uk/performance</div>
 
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="/bower_components/chartist/dist/chartist.min.js"></script>
@@ -37,17 +110,17 @@
         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
         // Our series array that contains series objects or in this case series data arrays
         series: [
-          [5, 2, 4, 2, 0]
+          [1, 2, 2, 4, 1]
         ]
       };
       // As options we currently only set a static size of 300x200 px
       var options = {
         axisX : {
-          showLabel: false,
+          //showLabel: false,
           showGrid: false
         },
         axisY : {
-          showLabel: false,
+          //showLabel: false,
           showGrid: false
         },
         showPoint: false,
@@ -66,7 +139,7 @@
         donut: true,
         donutWidth: 20,
         showLabel: false,
-        chartPadding: 20
+        chartPadding: 0
       });
 
     </script>

@@ -5,6 +5,9 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'public/css/application.css': 'public/scss/application.scss'
+        },
+        options: {
+          loadPath: 'node_modules/govuk_frontend_toolkit/stylesheets'
         }
       }
     },
