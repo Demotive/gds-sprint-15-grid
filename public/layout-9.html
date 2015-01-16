@@ -6,26 +6,41 @@
   <body class="layout-9">
 
     <div class="panel pos-1">
-      <div class="icon-figure">
-        <div class="title">
-          Blood donation appointments<br>
-          Users online now
+      <div class="container">
+        <div class="flip-card">
+          <div class="card front-face">
+            <div class="icon-figure">
+              <div class="title">
+                Blood donation appointments<br>
+                Users online now
+              </div>
+              <div class="image">
+                <img src="/images/heart.svg">
+              </div>
+              <div class="figure">0000</div>
+            </div>
+          </div>
+          <div class="card back-face">
+            <div class="icon-pie">
+              <div class="title">
+                Blood donation appointments<br>
+                User satisfaction
+              </div>
+              <div class="pie ct-chart pie-chart-1"></div>
+              <div class="figure">00%</div>
+            </div>
+          </div>
         </div>
-        <div class="image">
-          <img src="/images/heart.svg">
-        </div>
-        <div class="figure">0000</div>
       </div>
     </div>
 
-    <div class="panel pos-2">
-      <div class="container icon-pie">
+    <div class="panel pos-2 govuk">
+      <div class="container large-figure">
         <div class="title">
-          Lasting power of attorney<br>
-          User satisfaction
+          GOV.UK<br>
+          Visitors last week
         </div>
-        <div class="pie ct-chart chart-2"></div>
-        <div class="figure">00%</div>
+        <div class="figure">12,138,750</div>
       </div>
     </div>
 
@@ -45,14 +60,12 @@
             </div>
           </div>
           <div class="card back-face">
-            <div class="icon-figure">
+            <div class="icon-pie">
               <div class="title">
                 Book your driving test<br>
                 User satisfaction
               </div>
-              <div class="image">
-                <img src="/images/car.svg">
-              </div>
+              <div class="pie ct-chart pie-chart-2"></div>
               <div class="figure">00%</div>
             </div>
           </div>
@@ -60,10 +73,7 @@
       </div>
     </div>
 
-    <div class="panel pos-4">
-      <div class="container">
-        <span id="flip">Flip</span>
-      </div>
+    <div class="panel pos-4 yellow">
     </div>
 
     <div class="panel pos-5">
@@ -81,9 +91,10 @@
       </div>
     </div>
 
-    <div class="panel pos-6">
+    <div class="panel pos-6 yellow">
       <div class="container icon-line">
         <div class="title">
+          Digital by default<br>
           Service assessment pass rate
         </div>
         <div class="line ct-chart chart-1"></div>
@@ -91,18 +102,72 @@
     </div>
 
     <div class="panel pos-7">
-      <div class="container large-figure">
-        <div class="title">
-          GOV.UK<br>
-          Visitors last week
+      <div class="container">
+        <div class="flip-card">
+          <div class="card front-face">
+            <div class="icon-figure">
+              <div class="title">
+                Visit someone in prison<br>
+                Users online now
+              </div>
+              <div class="image">
+                <img src="/images/prison-gate.svg">
+              </div>
+              <div class="figure">0000</div>
+            </div>
+          </div>
+          <div class="card back-face">
+            <div class="icon-pie">
+              <div class="title">
+                Visit someone in prison<br>
+                User satisfaction
+              </div>
+              <div class="pie ct-chart pie-chart-3"></div>
+              <div class="figure">00%</div>
+            </div>
+          </div>
         </div>
-        <div class="figure">12,138,750</div>
       </div>
     </div>
 
-    <div class="panel pos-8"></div>
+    <div class="panel pos-8 govuk">
+      <div class="container large-figure">
+        <div class="title">
+          GOV.UK<br>
+          Users online now
+        </div>
+        <div class="figure">25,607</div>
+      </div>
+    </div>
 
-    <div class="panel pos-9 hashtag"></div>
+    <div class="panel pos-9">
+      <div class="container">
+        <div class="flip-card">
+          <div class="card front-face">
+            <div class="icon-figure">
+              <div class="title">
+                Register to vote<br>
+                Users online now
+              </div>
+              <div class="image">
+                <img src="/images/vote.svg">
+              </div>
+              <div class="figure">0000</div>
+            </div>
+          </div>
+          <div class="card back-face">
+            <div class="icon-pie">
+              <div class="title">
+                Register to vote<br>
+                User satisfaction
+              </div>
+              <div class="pie ct-chart pie-chart-4"></div>
+              <div class="figure">00%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="performance-link">Powered by www.gov.uk/performance</div>
 
@@ -142,9 +207,22 @@
 
       var sum = function(a, b) { return a + b };
 
-      new Chartist.Pie('.chart-2', data, {
-        /*donut: true,
-        donutWidth: 20,*/
+      new Chartist.Pie('.pie-chart-1', data, {
+        showLabel: false,
+        chartPadding: 0
+      });
+
+      new Chartist.Pie('.pie-chart-2', data, {
+        showLabel: false,
+        chartPadding: 0
+      });
+
+      new Chartist.Pie('.pie-chart-3', data, {
+        showLabel: false,
+        chartPadding: 0
+      });
+
+      new Chartist.Pie('.pie-chart-4', data, {
         showLabel: false,
         chartPadding: 0
       });

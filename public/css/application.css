@@ -432,6 +432,9 @@ body {
 img {
   display: block; }
 
+.panel {
+  position: absolute; }
+
 .layout-12 .panel {
   width: 25%;
   height: 33.3%; }
@@ -503,44 +506,14 @@ img {
   left: 66.6%;
   top: 66.6%; }
 
-.panel {
-  position: absolute; }
+.govuk {
+  background-color: #005ea5; }
 
-.pos-1 {
-  background-color: #85994b; }
-
-.pos-2 {
-  background-color: #912b88; }
-
-.pos-3 {
-  background-color: transparent; }
-
-.pos-4 {
-  background-color: #f499be; }
-
-.pos-5 {
-  background-color: transparent; }
-
-.pos-6 {
-  background-color: #b10e1e; }
-
-.pos-7 {
-  background-color: #85994b; }
-
-.pos-8 {
-  background-color: #28a197; }
-
-.pos-9 {
-  background-color: #2b8cc4; }
-
-.pos-10 {
-  background-color: #85994b; }
-
-.pos-11 {
-  background-color: #85994b; }
-
-.pos-12 {
+.yellow {
   background-color: #ffbf47; }
+
+.purple {
+  background-color: #2e358b; }
 
 .container {
   width: 100%;
@@ -548,8 +521,7 @@ img {
   position: relative;
   perspective: 100vw; }
 
-.flip-card,
-#card {
+.flip-card {
   position: absolute;
   top: 0;
   right: 0;
@@ -557,8 +529,7 @@ img {
   left: 0;
   transform-style: preserve-3d;
   transition: transform 0.75s; }
-  .flip-card .card,
-  #card .card {
+  .flip-card .card {
     position: absolute;
     top: 0;
     right: 0;
@@ -566,11 +537,9 @@ img {
     left: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
-  .flip-card .front-face,
-  #card .front-face {
+  .flip-card .front-face {
     transform-style: preserve-3d; }
-  .flip-card .back-face,
-  #card .back-face {
+  .flip-card .back-face {
     transform-style: preserve-3d;
     transform: rotateY(180deg); }
 
@@ -647,6 +616,7 @@ img {
   z-index: 999;
   padding: 1%;
   font-size: 2.5vh;
+  font-weight: 400;
   white-space: nowrap;
   background-color: #0b0c0c;
   -webkit-transform-origin: left top;

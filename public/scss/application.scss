@@ -22,6 +22,11 @@ img {
 
 // Main panels //////////////////////////////////////////////////////////////////////////
 
+// General attributes
+.panel {
+  position: absolute;
+}
+
 // 12 panel layout
 
 .layout-12 {
@@ -126,49 +131,23 @@ img {
   }
 }
 
-// General attributes
-.panel {
-  position: absolute;
+
+// Panel colour classes /////////////////////////////////////////////////////////////////
+
+.govuk {
+  background-color: $govuk-blue;
 }
 
-.pos-1 {
-  background-color: $grass-green;
-}
-.pos-2 {
-  background-color: $fuschia;
-}
-.pos-3 {
-  background-color: transparent;
-}
-.pos-4 {
-  background-color: $baby-pink;
-}
-.pos-5 {
-  background-color: transparent;
-}
-.pos-6 {
-  background-color: $red;
-}
-.pos-7 {
-  background-color: $grass-green;
-}
-.pos-8 {
-  background-color: $turquoise;
-}
-.pos-9 {
-  background-color: $light-blue;
-}
-.pos-10 {
-  background-color: $grass-green;
-}
-.pos-11 {
-  background-color: $grass-green;
-}
-.pos-12 {
+.yellow {
   background-color: $yellow;
 }
 
-// Inner container //////////////////////////////////////////////////////////////////////
+.purple {
+  background-color: $purple;
+}
+
+// Flip cards ///////////////////////////////////////////////////////////////////////////
+
 .container { 
   width: 100%;
   height: 100%;
@@ -176,9 +155,7 @@ img {
   perspective: 100vw;
 }
 
-// Flip cards ///////////////////////////////////////////////////////////////////////////
-.flip-card,
-#card {
+.flip-card {
   position: absolute;
   top: 0;
   right: 0;
@@ -208,6 +185,7 @@ img {
 }
 
 // General text (the defaults) //////////////////////////////////////////////////////////
+
 .layout-12 {
   .title {
     font-size: 1.5vw;
@@ -227,9 +205,13 @@ img {
 
 // cell "types" - i.e. large figure, realtime users etc /////////////////////////////////
 
+// Large figure /////////////////////////////////////////////////////////////////////////
+
 .large-figure { // up to 8 figures, with commas
   padding: 4%;
 }
+
+// Icon layout //////////////////////////////////////////////////////////////////////////
 
 .icon-figure {
   .title {
@@ -252,6 +234,8 @@ img {
   }
 }
 
+// Line chart layout ////////////////////////////////////////////////////////////////////
+
 .icon-line {
   .title {
     padding: 4% 4% 0 4%;
@@ -260,6 +244,8 @@ img {
     height: 50%;
   }
 }
+
+// Pie chart layout /////////////////////////////////////////////////////////////////////
 
 .icon-pie {
   .title {
@@ -283,7 +269,8 @@ img {
   }
 }
 
-// Sprint logo //////////////////////////////////////////////////////////////////////////
+// Sprint logo and hashtag //////////////////////////////////////////////////////////////
+
 .sprint-logo {
   display: flex;
   background-color: $white;
@@ -293,7 +280,6 @@ img {
   }
 }
 
-// Sprint hashtag //////////////////////////////////////////////////////////////////////////
 .hashtag {
   display: flex;
   background-color: $white;
@@ -305,6 +291,7 @@ img {
 }
 
 // Performance platform link ////////////////////////////////////////////////////////////
+
 #performance-link {
   position: absolute;
   left: 100%;
@@ -312,6 +299,7 @@ img {
   z-index: 999;
   padding: 1%;
   font-size: 2.5vh;
+  font-weight: 400;
   white-space: nowrap;
   background-color: $black;
   -webkit-transform-origin: left top;
