@@ -634,10 +634,9 @@ img {
 
 .hashtag {
   display: flex;
-  background-color: #0b0c0c;
-  font-size: 4.5vw;
-  font-weight: 400;
-  color: #fff; }
+  background-color: #fff;
+  color: #0b0c0c;
+  font-size: 4.5vw; }
   .hashtag > div {
     margin: auto; }
 

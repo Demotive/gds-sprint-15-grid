@@ -296,10 +296,9 @@ img {
 // Sprint hashtag //////////////////////////////////////////////////////////////////////////
 .hashtag {
   display: flex;
-  background-color: $black;
+  background-color: $white;
+  color: $black;
   font-size: 4.5vw;
-  font-weight: 400;
-  color: $white;
   & > div {
     margin: auto;
   }
