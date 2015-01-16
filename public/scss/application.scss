@@ -13,7 +13,7 @@ body {
 
   background-color: $black;
   color: $white;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 img {
@@ -21,70 +21,150 @@ img {
 }
 
 // Main panels //////////////////////////////////////////////////////////////////////////
+
+// 12 panel layout
+
+.layout-12 {
+  .panel {
+    width: 25%;
+    height: 33.3%;
+  }
+
+  .pos-1 {
+    left: 0;
+    top: 0;
+  }
+  .pos-2 {
+    left: 25%;
+    top: 0;
+  }
+  .pos-3 {
+    left: 50%;
+    top: 0;
+  }
+  .pos-4 {
+    left: 75%;
+    top: 0;
+  }
+  .pos-5 {
+    left: 0;
+    top: 33.3%;
+  }
+  .pos-6 {
+    left: 25%;
+    top: 33.3%;
+  }
+  .pos-7 {
+    left: 50%;
+    top: 33.3%;
+  }
+  .pos-8 {
+    left: 75%;
+    top: 33.3%;
+  }
+  .pos-9 {
+    left: 0;
+    top: 66.6%;
+  }
+  .pos-10 {
+    left: 25%;
+    top: 66.6%;
+  }
+  .pos-11 {
+    left: 50%;
+    top: 66.6%;
+  }
+  .pos-12 {
+    left: 75%;
+    top: 66.6%;
+  }
+}
+
+// 9 panel layout
+
+.layout-9 {
+  .panel {
+    width: 33.3%;
+    height: 33.3%;
+  }
+
+  .pos-1 {
+    left: 0;
+    top: 0;
+  }
+  .pos-2 {
+    left: 33.3%;
+    top: 0;
+  }
+  .pos-3 {
+    left: 66.6%;
+    top: 0;
+  }
+  .pos-4 {
+    left: 0;
+    top: 33.3%;
+  }
+  .pos-5 {
+    left: 33.3%;
+    top: 33.3%;
+  }
+  .pos-6 {
+    left: 66.6%;
+    top: 33.3%;
+  }
+  .pos-7 {
+    left: 0;
+    top: 66.6%;
+  }
+  .pos-8 {
+    left: 33.3%;
+    top: 66.6%;
+  }
+  .pos-9 {
+    left: 66.6%;
+    top: 66.6%;
+  }
+}
+
+// General attributes
 .panel {
-  width: 25%;
-  height: 33.3%;
   position: absolute;
 }
 
 .pos-1 {
-  left: 0;
-  top: 0;
-  background-color: $mauve;
+  background-color: $grass-green;
 }
 .pos-2 {
-  left: 25%;
-  top: 0;
   background-color: $fuschia;
 }
 .pos-3 {
-  left: 50%;
-  top: 0;
   background-color: transparent;
 }
 .pos-4 {
-  left: 75%;
-  top: 0;
   background-color: $baby-pink;
 }
 .pos-5 {
-  left: 0;
-  top: 33.3%;
-  background-color: $purple;
+  background-color: transparent;
 }
 .pos-6 {
-  left: 25%;
-  top: 33.3%;
   background-color: $red;
 }
 .pos-7 {
-  left: 50%;
-  top: 33.3%;
   background-color: $grass-green;
 }
 .pos-8 {
-  left: 75%;
-  top: 33.3%;
   background-color: $turquoise;
 }
 .pos-9 {
-  left: 0;
-  top: 66.6%;
   background-color: $light-blue;
 }
 .pos-10 {
-  left: 25%;
-  top: 66.6%;
-  background-color: transparent;
+  background-color: $grass-green;
 }
 .pos-11 {
-  left: 50%;
-  top: 66.6%;
-  background-color: transparent;
+  background-color: $grass-green;
 }
 .pos-12 {
-  left: 75%;
-  top: 66.6%;
   background-color: $yellow;
 }
 
@@ -93,43 +173,56 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
-  perspective: 800px;
+  perspective: 100vw;
 }
 
 // Flip cards ///////////////////////////////////////////////////////////////////////////
+.flip-card,
 #card {
-  width: 100%;
-  height: 100%;
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   transform-style: preserve-3d;
-  transition: transform 1s;
-}
+  transition: transform 0.75s;
 
-#card .card {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+  .card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 
-#card .front-face {
-  transform-style: preserve-3d;
-  background: $govuk-blue;
-}
-#card .back-face {
-  transform-style: preserve-3d;
-  background: $govuk-blue;
-  transform: rotateY( 180deg );
+  .front-face {
+    transform-style: preserve-3d;
+  }
+
+  .back-face {
+    transform-style: preserve-3d;
+    transform: rotateY( 180deg );
+  }
 }
 
 // General text (the defaults) //////////////////////////////////////////////////////////
-.title {
-  font-size: 1.75vw;
+.layout-12 {
+  .title {
+    font-size: 1.5vw;
+  }
+  .figure {
+    font-size: 4.5vw;
+  }
 }
-.figure {
-  font-size: 4.5vw;
+.layout-9 {
+  .title {
+    font-size: 1.75vw;
+  }
+  .figure {
+    font-size: 6vw;
+  }
 }
 
 // cell "types" - i.e. large figure, realtime users etc /////////////////////////////////
@@ -164,9 +257,7 @@ img {
     padding: 4% 4% 0 4%;
   }
   .line {
-    position: absolute;
-    top: 33.3%;
-    bottom: 0;
+    height: 50%;
   }
 }
 
@@ -192,6 +283,28 @@ img {
   }
 }
 
+// Sprint logo //////////////////////////////////////////////////////////////////////////
+.sprint-logo {
+  display: flex;
+  background-color: $white;
+  img {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+// Sprint hashtag //////////////////////////////////////////////////////////////////////////
+.hashtag {
+  display: flex;
+  background-color: $black;
+  font-size: 4.5vw;
+  font-weight: 400;
+  color: $white;
+  & > div {
+    margin: auto;
+  }
+}
+
 // Performance platform link ////////////////////////////////////////////////////////////
 #performance-link {
   position: absolute;
@@ -199,7 +312,7 @@ img {
   top: 0;
   z-index: 999;
   padding: 1%;
-  font-size: 3vh;
+  font-size: 2.5vh;
   white-space: nowrap;
   background-color: $black;
   -webkit-transform-origin: left top;

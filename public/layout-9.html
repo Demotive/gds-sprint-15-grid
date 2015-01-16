@@ -3,10 +3,19 @@
     <title>Scamp</title>
     <link rel="stylesheet" href="/css/application.css">
   </head>
-  <body class="layout-12">
+  <body class="layout-9">
 
-    <div class="panel pos-1 sprint-logo">
-      <img src="/images/sprint-logo-v3.svg">
+    <div class="panel pos-1">
+      <div class="icon-figure">
+        <div class="title">
+          Blood donation appointments<br>
+          Users online now
+        </div>
+        <div class="image">
+          <img src="/images/heart.svg">
+        </div>
+        <div class="figure">0000</div>
+      </div>
     </div>
 
     <div class="panel pos-2">
@@ -52,15 +61,23 @@
     </div>
 
     <div class="panel pos-4">
+      <div class="container">
+        <span id="flip">Flip</span>
+      </div>
     </div>
 
     <div class="panel pos-5">
-      <div class="container large-figure">
-        <div class="title">
-          GOV.UK<br>
-          Visitors last week
+      <div class="container">
+        <div class="flip-card">
+          <div class="card front-face sprint-logo">
+            <img src="/images/sprint-logo-v3.svg">
+          </div>
+          <div class="card back-face hashtag">
+            <div>
+              #SPRINT15
+            </div>
+          </div>
         </div>
-        <div class="figure">12,138,750</div>
       </div>
     </div>
 
@@ -73,43 +90,19 @@
       </div>
     </div>
 
-    <div class="panel pos-7"></div>
+    <div class="panel pos-7">
+      <div class="container large-figure">
+        <div class="title">
+          GOV.UK<br>
+          Visitors last week
+        </div>
+        <div class="figure">12,138,750</div>
+      </div>
+    </div>
 
     <div class="panel pos-8"></div>
 
-    <div class="panel pos-9"></div>
-
-    <div class="panel pos-10">
-      <div class="icon-figure">
-        <div class="title">
-          Blood donation appointments<br>
-          Users online now
-        </div>
-        <div class="image">
-          <img src="/images/heart.svg">
-        </div>
-        <div class="figure">0000</div>
-      </div>
-    </div>
-
-    <div class="panel pos-11">
-      <div class="icon-figure">
-        <div class="title">
-          Lasting power of attorney<br>
-          Users online now
-        </div>
-        <div class="image">
-          <img src="/images/car.svg">
-        </div>
-        <div class="figure">0000</div>
-      </div>
-    </div>
-
-    <div class="panel pos-12 hashtag">
-      <div>
-        #SPRINT15
-      </div>
-    </div>
+    <div class="panel pos-9 hashtag"></div>
 
     <div id="performance-link">Powered by www.gov.uk/performance</div>
 
@@ -150,6 +143,8 @@
       var sum = function(a, b) { return a + b };
 
       new Chartist.Pie('.chart-2', data, {
+        /*donut: true,
+        donutWidth: 20,*/
         showLabel: false,
         chartPadding: 0
       });

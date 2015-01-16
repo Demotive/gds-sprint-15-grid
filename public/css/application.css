@@ -427,111 +427,162 @@ body {
   font-weight: 400;
   background-color: #0b0c0c;
   color: #fff;
-  font-weight: bold; }
+  font-weight: 700; }
 
 img {
   display: block; }
 
-.panel {
+.layout-12 .panel {
   width: 25%;
-  height: 33.3%;
+  height: 33.3%; }
+.layout-12 .pos-1 {
+  left: 0;
+  top: 0; }
+.layout-12 .pos-2 {
+  left: 25%;
+  top: 0; }
+.layout-12 .pos-3 {
+  left: 50%;
+  top: 0; }
+.layout-12 .pos-4 {
+  left: 75%;
+  top: 0; }
+.layout-12 .pos-5 {
+  left: 0;
+  top: 33.3%; }
+.layout-12 .pos-6 {
+  left: 25%;
+  top: 33.3%; }
+.layout-12 .pos-7 {
+  left: 50%;
+  top: 33.3%; }
+.layout-12 .pos-8 {
+  left: 75%;
+  top: 33.3%; }
+.layout-12 .pos-9 {
+  left: 0;
+  top: 66.6%; }
+.layout-12 .pos-10 {
+  left: 25%;
+  top: 66.6%; }
+.layout-12 .pos-11 {
+  left: 50%;
+  top: 66.6%; }
+.layout-12 .pos-12 {
+  left: 75%;
+  top: 66.6%; }
+
+.layout-9 .panel {
+  width: 33.3%;
+  height: 33.3%; }
+.layout-9 .pos-1 {
+  left: 0;
+  top: 0; }
+.layout-9 .pos-2 {
+  left: 33.3%;
+  top: 0; }
+.layout-9 .pos-3 {
+  left: 66.6%;
+  top: 0; }
+.layout-9 .pos-4 {
+  left: 0;
+  top: 33.3%; }
+.layout-9 .pos-5 {
+  left: 33.3%;
+  top: 33.3%; }
+.layout-9 .pos-6 {
+  left: 66.6%;
+  top: 33.3%; }
+.layout-9 .pos-7 {
+  left: 0;
+  top: 66.6%; }
+.layout-9 .pos-8 {
+  left: 33.3%;
+  top: 66.6%; }
+.layout-9 .pos-9 {
+  left: 66.6%;
+  top: 66.6%; }
+
+.panel {
   position: absolute; }
 
 .pos-1 {
-  left: 0;
-  top: 0;
-  background-color: #6f72af; }
+  background-color: #85994b; }
 
 .pos-2 {
-  left: 25%;
-  top: 0;
   background-color: #912b88; }
 
 .pos-3 {
-  left: 50%;
-  top: 0;
   background-color: transparent; }
 
 .pos-4 {
-  left: 75%;
-  top: 0;
   background-color: #f499be; }
 
 .pos-5 {
-  left: 0;
-  top: 33.3%;
-  background-color: #2e358b; }
+  background-color: transparent; }
 
 .pos-6 {
-  left: 25%;
-  top: 33.3%;
   background-color: #b10e1e; }
 
 .pos-7 {
-  left: 50%;
-  top: 33.3%;
   background-color: #85994b; }
 
 .pos-8 {
-  left: 75%;
-  top: 33.3%;
   background-color: #28a197; }
 
 .pos-9 {
-  left: 0;
-  top: 66.6%;
   background-color: #2b8cc4; }
 
 .pos-10 {
-  left: 25%;
-  top: 66.6%;
-  background-color: transparent; }
+  background-color: #85994b; }
 
 .pos-11 {
-  left: 50%;
-  top: 66.6%;
-  background-color: transparent; }
+  background-color: #85994b; }
 
 .pos-12 {
-  left: 75%;
-  top: 66.6%;
   background-color: #ffbf47; }
 
 .container {
   width: 100%;
   height: 100%;
   position: relative;
-  perspective: 800px; }
+  perspective: 100vw; }
 
+.flip-card,
 #card {
-  width: 100%;
-  height: 100%;
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   transform-style: preserve-3d;
-  transition: transform 1s; }
+  transition: transform 0.75s; }
+  .flip-card .card,
+  #card .card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .flip-card .front-face,
+  #card .front-face {
+    transform-style: preserve-3d; }
+  .flip-card .back-face,
+  #card .back-face {
+    transform-style: preserve-3d;
+    transform: rotateY(180deg); }
 
-#card .card {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-#card .front-face {
-  transform-style: preserve-3d;
-  background: #005ea5; }
-
-#card .back-face {
-  transform-style: preserve-3d;
-  background: #005ea5;
-  transform: rotateY(180deg); }
-
-.title {
-  font-size: 1.75vw; }
-
-.figure {
+.layout-12 .title {
+  font-size: 1.5vw; }
+.layout-12 .figure {
   font-size: 4.5vw; }
+
+.layout-9 .title {
+  font-size: 1.75vw; }
+.layout-9 .figure {
+  font-size: 6vw; }
 
 .large-figure {
   padding: 4%; }
@@ -555,9 +606,7 @@ img {
 .icon-line .title {
   padding: 4% 4% 0 4%; }
 .icon-line .line {
-  position: absolute;
-  top: 33.3%;
-  bottom: 0; }
+  height: 50%; }
 
 .icon-pie .title {
   padding: 4% 4% 0 4%; }
@@ -576,13 +625,29 @@ img {
   padding: 4% 4% 4% 0;
   font-size: 6.5vw; }
 
+.sprint-logo {
+  display: flex;
+  background-color: #fff; }
+  .sprint-logo img {
+    margin: auto;
+    width: 80%; }
+
+.hashtag {
+  display: flex;
+  background-color: #0b0c0c;
+  font-size: 4.5vw;
+  font-weight: 400;
+  color: #fff; }
+  .hashtag > div {
+    margin: auto; }
+
 #performance-link {
   position: absolute;
   left: 100%;
   top: 0;
   z-index: 999;
   padding: 1%;
-  font-size: 3vh;
+  font-size: 2.5vh;
   white-space: nowrap;
   background-color: #0b0c0c;
   -webkit-transform-origin: left top;
