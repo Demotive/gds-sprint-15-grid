@@ -1,6 +1,9 @@
 var express = require('express')
 var request = require('request');
 var app = express();
+var port = (process.env.PORT || 3000);
+
+
 
 // serve anything in /public directly, ie http://xxxxx.xxxxx.xxx/layout-scamp.html
 app.use(express.static(__dirname + '/public'));
@@ -84,7 +87,7 @@ app.get('/govuk/devices', function (req, res) {
 
 // ----------------------------------------------------------------------------
 
-var server = app.listen(3000, function () {
+var server = app.listen(port, function () {
 
   var host = server.address().address
   var port = server.address().port
