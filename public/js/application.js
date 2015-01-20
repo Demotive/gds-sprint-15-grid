@@ -1,18 +1,54 @@
 var flipCards = [];
 
-var flipCard = function($card) {
-  var rotation = $card.data('rotation');
-  rotation = rotation + 180;
-  $card.css({
-    transform: 'rotateY(' + (rotation) + 'deg)'
-  });
-  /*$card.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-    console.log('flipped');
-  });*/
-  $card.data('rotation', rotation);
+// Returns a random integer between min (included) and max (excluded)
+// Using Math.round() will give you a non-uniform distribution!
+getRandomInt = function(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
-var flipNextCard = function(i) {
+// reset previously flipped card
+var resetFlipCard = function() {
+  var $flipped = $('.flipped');
+  if ($flipped.length > 0) {
+    $flipped.each(function() {
+      var $this = $(this);
+      var rotation = $this.data('rotation');
+      rotation = rotation + 180;
+      $this
+        .css({
+          transform: 'rotateY(' + (rotation) + 'deg)'
+        })
+        .data('rotation', rotation)
+        .one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+          $(this).removeClass('flipped');
+          //flipCard();
+        });
+    });
+    flipCard();
+  } else {
+    flipCard();
+  }
+}
+
+var flipCard = function() {
+  var random = getRandomInt(0, 10);
+  if (flipCards[random].hasClass('flipped')) {
+    return false;
+  }
+  var rotation = flipCards[random].data('rotation');
+  rotation = rotation + 180;
+  flipCards[random]
+    .css({
+      transform: 'rotateY(' + (rotation) + 'deg)'
+    })
+    .data('rotation', rotation)
+    .one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+      $(this).toggleClass('flipped');
+    });
+}
+
+// cascade script
+/*var flipNextCard = function(i) {
   if (i === flipCards.length) {
     return false;
   }
@@ -21,7 +57,7 @@ var flipNextCard = function(i) {
     i++;
     flipNextCard(i);
   });
-}
+}*/
 
 var init = function() {
 
@@ -31,21 +67,20 @@ var init = function() {
     flipCards.push($this);
   });
 
-  // make this a random timer call
-  $(document).on('click', '.flip-card', function() {
-    flipCard($(this));
-  });
+  var intervalID = window.setInterval(resetFlipCard, 5*1000);
 
-  // try this
-  $(document).on('click', '.sprint-logo', function() {
+  // make this a random timer call
+  /*$(document).on('click', '.flip-card', function() {
+    var random = getRandomInt(0, 10);
+    // this one is to be the random one
+    flipCard(flipCards[random]);
+  });*/
+
+  // cascade style
+  /*$(document).on('click', '.sprint-logo', function() {
     var i = 0;
     flipNextCard(i);
-    // All cards at once
-    /*for (var i=0; i<flipCards.length; i++) {
-      var current = flipCards[i];
-      flipCard(current);
-    }*/
-  });
+  });*/
 
 };
 

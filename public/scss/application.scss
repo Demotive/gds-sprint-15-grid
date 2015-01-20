@@ -1,8 +1,12 @@
-@import 'chartist';
-
 // distilled from govuk_toolkit and template
 @import 'fonts';
 @import 'colours';
+
+@import 'chartist';
+.ct-chart-pie .ct-label {
+  color: $black;
+  fill: $black;
+}
 
 * {
   box-sizing: border-box;
@@ -85,7 +89,7 @@ img {
   }
 }
 
-// 9 panel layout
+// 9 panel layout KILL THIS
 
 .layout-9 {
   .panel {
@@ -134,47 +138,26 @@ img {
 
 // Panel colour classes /////////////////////////////////////////////////////////////////
 
-.govuk {
-  background-color: $govuk-blue;
-}
-
-.yellow {
-  background-color: $yellow;
-}
-
-.purple {
-  background-color: $purple;
-}
-
-// mono style
-.light {
-  background-color: #C7E570;
-  color: #4E592C;
-}
-.dark {
-  background-color: #4E592C;
-}
-
 // colour pallette from Michael
-.c1 {
+.c0 {
   background-color: rgb(132, 153, 75); // the key green
 }
-.c2 {
+.c1 {
   background-color: rgb(237, 28, 26);
 }
-.c3 {
+.c2 {
   background-color: rgb(241, 103, 36);
 }
-.c4 {
+.c3 {
   background-color: rgb(251, 178, 27);
 }
-.c5 {
+.c4 {
   background-color: rgb(93, 188, 105);
 }
-.c6 {
+.c5 {
   background-color: rgb(51, 192, 204);
 }
-.c7 {
+.c6 {
   background-color: rgb(214, 49, 123);
 }
 
@@ -208,6 +191,7 @@ img {
 
   .front-face {
     transform-style: preserve-3d;
+    //transform: rotateY( 180deg );
   }
 
   .back-face {
@@ -217,7 +201,7 @@ img {
 }
 
 .layout-12 {
-  .card {
+  .front-face, .govuk {
     display: flex;
 
     & > div {
@@ -236,6 +220,8 @@ img {
     font-size: 4.5vw;
   }
 }
+
+// KILL
 .layout-9 {
   .title {
     font-size: 1.75vw;
@@ -253,8 +239,53 @@ img {
   padding: 4%;
 }
 
+// Graph layouts ////////////////////////////////////////////////////////////////////////
+
+.pie-container {
+  display: table;
+  height: 100%;
+
+  .cell-left {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 2% 4% 0 4%;
+  }
+
+  .cell-right {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    padding: 2% 4% 0 0;
+  }
+}
+
+.pie-key {
+  margin-top: 2vh;
+}
+.pie-value {
+  font-size: 4.5vw;
+}
+.pie-value + .pie-key {
+  margin-top: -0.75em;
+}
+
+.line-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2% 4%;
+  .ct-chart {
+    height: 70%;
+  }
+}
+
+
 // Icon layout //////////////////////////////////////////////////////////////////////////
 
+// KILL
 .icon-figure {
   .title {
     padding: 4% 4% 0 4%;
@@ -278,6 +309,7 @@ img {
 
 // Line chart layout ////////////////////////////////////////////////////////////////////
 
+// KILL
 .icon-line {
   .title {
     padding: 4% 4% 0 4%;
@@ -289,6 +321,7 @@ img {
 
 // Pie chart layout /////////////////////////////////////////////////////////////////////
 
+// KILL
 .icon-pie {
   .title {
     padding: 4% 4% 0 4%;
@@ -336,7 +369,7 @@ img {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 1vh;
+    bottom: 2vh;
     font-size: 2.5vh;
     font-weight: 400;
     text-align: center;
@@ -346,6 +379,7 @@ img {
 
 // Performance platform link ////////////////////////////////////////////////////////////
 
+// KILL
 #performance-link {
   position: absolute;
   left: 100%;
