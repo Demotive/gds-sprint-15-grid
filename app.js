@@ -9,10 +9,6 @@ var port = (process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
-/*app.get('/layout-scamp', function (req, res) {
-  res.sendFile(__dirname + '/public/layout-scamp.html')
-});*/
-
 // JSON proxies to performance platform
 var failure = { error: true };
 var service = 'https://www.performance.service.gov.uk/data/';

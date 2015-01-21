@@ -8,6 +8,9 @@ getRandomInt = function(min, max) {
 
 // reset previously flipped card
 var resetFlipCard = function() {
+  if (document.visibilityState === 'hidden') {
+    return false;
+  }
   var $flipped = $('.flipped');
   if ($flipped.length > 0) {
     $flipped.each(function() {
@@ -47,17 +50,8 @@ var flipCard = function() {
     });
 }
 
-// cascade script
-/*var flipNextCard = function(i) {
-  if (i === flipCards.length) {
-    return false;
-  }
-  flipCard(flipCards[i]);
-  flipCards[i].one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-    i++;
-    flipNextCard(i);
-  });
-}*/
+/////////////////////////////////////////////////////////////////////////////////////////
+
 
 var init = function() {
 
@@ -68,19 +62,6 @@ var init = function() {
   });
 
   var intervalID = window.setInterval(resetFlipCard, 5*1000);
-
-  // make this a random timer call
-  /*$(document).on('click', '.flip-card', function() {
-    var random = getRandomInt(0, 10);
-    // this one is to be the random one
-    flipCard(flipCards[random]);
-  });*/
-
-  // cascade style
-  /*$(document).on('click', '.sprint-logo', function() {
-    var i = 0;
-    flipNextCard(i);
-  });*/
 
 };
 
