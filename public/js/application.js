@@ -50,6 +50,16 @@ var flipCard = function() {
     });
 }
 
+/*
+var theData = {
+  content: 0000
+};
+ var theTemplateScript = $("#govuk-realtime").html();  
+var theTemplate = Handlebars.compile(theTemplateScript);  
+
+$(document.body).append (theTemplate (theData));
+*/
+
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
