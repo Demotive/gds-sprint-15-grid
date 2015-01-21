@@ -50,15 +50,64 @@ var flipCard = function() {
     });
 }
 
-/*
-var theData = {
-  content: 0000
-};
- var theTemplateScript = $("#govuk-realtime").html();  
-var theTemplate = Handlebars.compile(theTemplateScript);  
+/////////////////////////////////////////////////////////////////////////////////////////
 
-$(document.body).append (theTemplate (theData));
-*/
+var realtimeServices = [
+  {
+    url: '/govuk/realtime',
+    selector: '#govuk'
+  },
+  {
+    url: '/driving-test/realtime',
+    selector: '#driving-test'
+  },
+  {
+    url: '/blood-donor-appointments/realtime',
+    selector: '#blood-donor-appointments'
+  },
+  {
+    url: '/prison-visits/realtime',
+    selector: '#prison-visits'
+  },
+  {
+    url: '/carers-allowance/realtime',
+    selector: '#carers-allowance'
+  },
+  {
+    url: '/tax-disc/realtime',
+    selector: '#tax-disc'
+  },
+  {
+    url: '/view-driving-record/realtime',
+    selector: '#view-driving-record'
+  },
+  {
+    url: '/registered-traveller-scheme/realtime',
+    selector: '#registered-traveller-scheme'
+  },
+  {
+    url: '/register-to-vote/realtime',
+    selector: '#register-to-vote'
+  },
+  {
+    url: '/sorn/realtime',
+    selector: '#sorn'
+  }
+];
+
+var updateUsers = function() {
+  for (var i=0; i<realtimeServices.length; i++) {
+    $.ajax({
+      dataType: 'json',
+      cache: false,
+      async: false,
+      url: realtimeServices[i].url,
+      success: function(d) {
+        $(realtimeServices[i].selector).text(d);
+      }
+    });
+  }
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -71,10 +120,12 @@ var init = function() {
     flipCards.push($this);
   });
 
-  var intervalID = window.setInterval(resetFlipCard, 5*1000);
+  var flipTiming = window.setInterval(resetFlipCard, 5*1000);
+  var pollServices = window.setInterval(updateUsers, 30*1000);
 
 };
 
 $(function() {
+  updateUsers();
   init();
 });
