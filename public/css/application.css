@@ -566,6 +566,7 @@ img {
     transform: rotateY(180deg); }
 
 .layout-12 .front-face, .layout-12 .govuk {
+  display: -webkit-flex;
   display: flex; }
   .layout-12 .front-face > div, .layout-12 .govuk > div {
     margin: auto 0; }
@@ -655,6 +656,7 @@ img {
   font-size: 6.5vw; }
 
 .sprint-logo {
+  display: -webkit-flex;
   display: flex;
   background-color: #fff; }
   .sprint-logo img {
@@ -662,6 +664,7 @@ img {
     width: 80%; }
 
 .hashtag {
+  display: -webkit-flex;
   display: flex;
   font-size: 4.5vw; }
   .hashtag > div {

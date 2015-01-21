@@ -209,6 +209,7 @@ img {
 
 .layout-12 {
   .front-face, .govuk {
+    display: -webkit-flex;
     display: flex;
 
     & > div {
@@ -354,6 +355,7 @@ img {
 // Sprint logo and hashtag //////////////////////////////////////////////////////////////
 
 .sprint-logo {
+  display: -webkit-flex;
   display: flex;
   background-color: $white;
   img {
@@ -363,6 +365,7 @@ img {
 }
 
 .hashtag {
+  display: -webkit-flex;
   display: flex;
   font-size: 4.5vw;
   & > div {
