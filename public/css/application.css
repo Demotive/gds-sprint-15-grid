@@ -535,6 +535,7 @@ img {
   width: 100%;
   height: 100%;
   position: relative;
+  -webkit-perspective: 100vw;
   perspective: 100vw; }
 
 .flip-card {
@@ -543,7 +544,9 @@ img {
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: transform 0.5s;
   transition: transform 0.5s; }
   .flip-card .card {
     position: absolute;
@@ -554,9 +557,12 @@ img {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
   .flip-card .front-face {
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d; }
   .flip-card .back-face {
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
 
 .layout-12 .front-face, .layout-12 .govuk {
