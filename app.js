@@ -73,6 +73,10 @@ app.get('/sorn/realtime', function (req, res) {
   getRealtime('sorn', req, res);
 });
 
+app.get('/licensing/realtime', function (req, res) {
+  getRealtime('licensing', req, res);
+});
+
 
 // ----------------------------------------------------------------------------
 

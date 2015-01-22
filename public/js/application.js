@@ -6,6 +6,19 @@ getRandomInt = function(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// add commas to long numbers
+var addCommas = function(n) {
+  n += '';
+  x = n.split('.');
+  x1 = x[0];
+  x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+  }
+  return x1 + x2;
+}
+
 // reset previously flipped card(s)
 var resetFlipCard = function() {
   if (document.visibilityState === 'hidden') {
@@ -91,6 +104,10 @@ var realtimeServices = [
   {
     url: '/sorn/realtime',
     selector: '#sorn'
+  },
+  {
+    url: '/licensing/realtime',
+    selector: '#licensing'
   }
 ];
 
@@ -102,7 +119,7 @@ var updateUsers = function() {
       async: false,
       url: realtimeServices[i].url,
       success: function(d) {
-        $(realtimeServices[i].selector).text(d);
+        $(realtimeServices[i].selector).text(addCommas(d));
       }
     });
   }
@@ -119,7 +136,7 @@ var init = function() {
     flipCards.push($this);
   });
 
-  var flipTiming = window.setInterval(resetFlipCard, 5*1000);
+  //var flipTiming = window.setInterval(resetFlipCard, 5*1000);
   var pollServices = window.setInterval(updateUsers, 30*1000);
 
 };

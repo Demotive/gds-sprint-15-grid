@@ -66,17 +66,17 @@
 .ct-chart .ct-series.ct-series-a .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-a .ct-area {
   fill: white; }
 .ct-chart .ct-series.ct-series-b .ct-point, .ct-chart .ct-series.ct-series-b .ct-line, .ct-chart .ct-series.ct-series-b .ct-bar, .ct-chart .ct-series.ct-series-b .ct-slice.ct-donut {
-  stroke: rgba(255, 255, 255, 0.75); }
+  stroke: rgba(255, 255, 255, 0.66); }
 .ct-chart .ct-series.ct-series-b .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-b .ct-area {
-  fill: rgba(255, 255, 255, 0.75); }
+  fill: rgba(255, 255, 255, 0.66); }
 .ct-chart .ct-series.ct-series-c .ct-point, .ct-chart .ct-series.ct-series-c .ct-line, .ct-chart .ct-series.ct-series-c .ct-bar, .ct-chart .ct-series.ct-series-c .ct-slice.ct-donut {
-  stroke: rgba(255, 255, 255, 0.5); }
+  stroke: rgba(255, 255, 255, 0.33); }
 .ct-chart .ct-series.ct-series-c .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-c .ct-area {
-  fill: rgba(255, 255, 255, 0.5); }
+  fill: rgba(255, 255, 255, 0.33); }
 .ct-chart .ct-series.ct-series-d .ct-point, .ct-chart .ct-series.ct-series-d .ct-line, .ct-chart .ct-series.ct-series-d .ct-bar, .ct-chart .ct-series.ct-series-d .ct-slice.ct-donut {
-  stroke: rgba(255, 255, 255, 0.25); }
+  stroke: rgba(255, 255, 255, 0.15); }
 .ct-chart .ct-series.ct-series-d .ct-slice:not(.ct-donut), .ct-chart .ct-series.ct-series-d .ct-area {
-  fill: rgba(255, 255, 255, 0.25); }
+  fill: rgba(255, 255, 255, 0.15); }
 .ct-chart.ct-square {
   display: block;
   position: relative;
@@ -579,7 +579,7 @@ img {
   margin-top: 2vh; }
 
 .pie-value {
-  font-size: 4vw; }
+  font-size: 3.75vw; }
 
 .pie-value + .pie-key {
   margin-top: -0.75em; }
