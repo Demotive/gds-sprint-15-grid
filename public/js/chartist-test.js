@@ -25,7 +25,7 @@ new Chartist.Pie('.graph-1',
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // https://www.gov.uk/performance/carers-allowance/user-satisfaction
-new Chartist.Pie('.graph-9',
+new Chartist.Pie('.graph-2',
   {
     series: [90.9, 9.1]
   },
