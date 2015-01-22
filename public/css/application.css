@@ -439,75 +439,56 @@ img {
 .panel {
   position: absolute; }
 
-.layout-12 .panel {
+.panel {
   width: 25%;
   height: 33.3%; }
-.layout-12 .pos-1 {
+
+.pos-1 {
   left: 0;
   top: 0; }
-.layout-12 .pos-2 {
+
+.pos-2 {
   left: 25%;
   top: 0; }
-.layout-12 .pos-3 {
+
+.pos-3 {
   left: 50%;
   top: 0; }
-.layout-12 .pos-4 {
+
+.pos-4 {
   left: 75%;
   top: 0; }
-.layout-12 .pos-5 {
+
+.pos-5 {
   left: 0;
   top: 33.3%; }
-.layout-12 .pos-6 {
+
+.pos-6 {
   left: 25%;
   top: 33.3%; }
-.layout-12 .pos-7 {
+
+.pos-7 {
   left: 50%;
   top: 33.3%; }
-.layout-12 .pos-8 {
+
+.pos-8 {
   left: 75%;
   top: 33.3%; }
-.layout-12 .pos-9 {
+
+.pos-9 {
   left: 0;
-  top: 66.6%; }
-.layout-12 .pos-10 {
-  left: 25%;
-  top: 66.6%; }
-.layout-12 .pos-11 {
-  left: 50%;
-  top: 66.6%; }
-.layout-12 .pos-12 {
-  left: 75%;
   top: 66.6%; }
 
-.layout-9 .panel {
-  width: 33.3%;
-  height: 33.3%; }
-.layout-9 .pos-1 {
-  left: 0;
-  top: 0; }
-.layout-9 .pos-2 {
-  left: 33.3%;
-  top: 0; }
-.layout-9 .pos-3 {
-  left: 66.6%;
-  top: 0; }
-.layout-9 .pos-4 {
-  left: 0;
-  top: 33.3%; }
-.layout-9 .pos-5 {
-  left: 33.3%;
-  top: 33.3%; }
-.layout-9 .pos-6 {
-  left: 66.6%;
-  top: 33.3%; }
-.layout-9 .pos-7 {
-  left: 0;
+.pos-10 {
+  left: 25%;
   top: 66.6%; }
-.layout-9 .pos-8 {
-  left: 33.3%;
+
+.pos-11 {
+  left: 50%;
   top: 66.6%; }
-.layout-9 .pos-9 {
-  left: 66.6%;
+
+.pos-12 {
+  left: 75%;
   top: 66.6%; }
 
 .c0 {
@@ -558,28 +539,24 @@ img {
     backface-visibility: hidden; }
   .flip-card .front-face {
     -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d; }
-  .flip-card .back-face {
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
+  .flip-card .back-face {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
 
-.layout-12 .front-face, .layout-12 .govuk {
+.front-face, .govuk {
   display: -webkit-flex;
   display: flex; }
-  .layout-12 .front-face > div, .layout-12 .govuk > div {
+  .front-face > div, .govuk > div {
     margin: auto 0; }
 
-.layout-12 .title {
+.title {
   font-size: 1.5vw; }
-.layout-12 .figure {
-  font-size: 4.5vw; }
 
-.layout-9 .title {
-  font-size: 1.75vw; }
-.layout-9 .figure {
-  font-size: 6vw; }
+.figure {
+  font-size: 4.5vw; }
 
 .large-figure {
   padding: 4%; }
@@ -617,44 +594,6 @@ img {
   .line-container .ct-chart {
     height: 70%; }
 
-.icon-figure .title {
-  padding: 4% 4% 0 4%; }
-.icon-figure .image {
-  position: absolute;
-  top: 33.3%;
-  bottom: 0;
-  width: 33.3%;
-  padding: 4%; }
-.icon-figure .figure {
-  position: absolute;
-  top: 33.3%;
-  left: 33.3%;
-  bottom: 0;
-  width: 66.6%;
-  padding: 4% 4% 4% 0; }
-
-.icon-line .title {
-  padding: 4% 4% 0 4%; }
-.icon-line .line {
-  height: 50%; }
-
-.icon-pie .title {
-  padding: 4% 4% 0 4%; }
-.icon-pie .pie {
-  position: absolute;
-  top: 33.3%;
-  bottom: 0;
-  width: 33.3%;
-  padding: 5% 4%; }
-.icon-pie .figure {
-  position: absolute;
-  top: 33.3%;
-  left: 33.3%;
-  bottom: 0;
-  width: 66.6%;
-  padding: 4% 4% 4% 0;
-  font-size: 6.5vw; }
-
 .sprint-logo {
   display: -webkit-flex;
   display: flex;
@@ -681,19 +620,5 @@ img {
     font-weight: 400;
     text-align: center;
     white-space: nowrap; }
-
-#performance-link {
-  position: absolute;
-  left: 100%;
-  top: 0;
-  z-index: 999;
-  padding: 1%;
-  font-size: 2.5vh;
-  font-weight: 400;
-  white-space: nowrap;
-  background-color: #0b0c0c;
-  -webkit-transform-origin: left top;
-  transform-origin: left top;
-  transform: rotate(90deg); }
 
 /*# sourceMappingURL=application.css.map */
