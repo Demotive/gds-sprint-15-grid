@@ -6,7 +6,7 @@ getRandomInt = function(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// reset previously flipped card
+// reset previously flipped card(s)
 var resetFlipCard = function() {
   if (document.visibilityState === 'hidden') {
     return false;
@@ -24,7 +24,6 @@ var resetFlipCard = function() {
         .data('rotation', rotation)
         .one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
           $(this).removeClass('flipped');
-          //flipCard();
         });
     });
     flipCard();

@@ -1,7 +1,10 @@
 
+/////////////////////////////////////////////////////////////////////////////////////////
+
+// https://www.gov.uk/performance/renew-patent/digital-takeup
 new Chartist.Pie('.graph-1',
   {
-    series: [91, 9]
+    series: [94.1, 5.9]
   },
   {
     showLabel: false,
