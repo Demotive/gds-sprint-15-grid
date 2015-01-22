@@ -13,6 +13,11 @@ app.use('/bower_components', express.static(__dirname + '/bower_components'));
 var failure = { error: true };
 var service = 'https://www.performance.service.gov.uk/data/';
 
+// serve layout 12 as the base index file
+app.get('/', function(request, response) {
+    response.sendfile('./public/layout-12.html');
+});
+
 
 // ----------------------------------------------------------------------------
 
