@@ -1,6 +1,8 @@
 # gds-sprint-15-grid
 Sprint 15 grid - 12 x 12 data grid for use at BFI
 
+http://gds-matrix.herokuapp.com/
+
 ## What is it
 
 It's a little Node / Express app that gathers (and then polls) data from the GOV.UK performance platform.
@@ -10,6 +12,10 @@ It's a little Node / Express app that gathers (and then polls) data from the GOV
 Make sure you have Node, NPM, Grunt, Bower installed.
 
 For the time being, packages are in this repo. So at the moment it's a case of ```grunt``` in the project directory.
+
+### The offline version
+
+```grunt offline``` will package up the app in a single html file. It will use _yesterday's_ realtime data.
 
 ==========
 
