@@ -62,6 +62,8 @@ var updateUsers = function() {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 $(function() {
-  updateUsers();
-  var pollServices = window.setInterval(updateUsers, 30*1000);
+  if (typeof offline === 'undefined') {
+    updateUsers();
+    var pollServices = window.setInterval(updateUsers, 30*1000);
+  }
 });

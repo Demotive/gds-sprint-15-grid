@@ -53,15 +53,13 @@ module.exports = function(grunt) {
     smoosher: {
       options: {
         jsTags: { // optional
-          start: '<script type="text/javascript">', // default: <script>
-          end: '</script>'
-        },
-        jsDir: ['public', 'bower_components'],
-        cssDir: 'public'
+          start: '<script type="text/javascript">\n',
+          end: '</script>\n'
+        }
       },
       all: {
         files: {
-          'public/offline-version.html': 'public/index.html',
+          'public/offline-version.html': 'public/offline-version.html',
         },
       },
     },
@@ -100,8 +98,8 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('appendData', 'Appends JSON data into the single offline document.', function() {
 
-    var allTheThings = '<script type="text/javascript">\n';
-    allTheThings += 'var offline = true;\n\n';
+    var offlineData = '<script type="text/javascript">\n';
+    offlineData += 'var offline = true;\n\n';
 
     this.files.forEach(function(file) {
       var items = file.src.map(function(filepath) {
@@ -112,22 +110,24 @@ module.exports = function(grunt) {
 
         var jsonBlock = grunt.file.read(filepath);
 
-        allTheThings += 'var ' + jsonBlockName + ' = ';
-        allTheThings += jsonBlock;
-        allTheThings += ';\n';
+        offlineData += 'var ' + jsonBlockName + ' = ';
+        offlineData += jsonBlock;
+        offlineData += ';\n';
 
       });
     });
 
-    allTheThings += '</script>\n';
+    offlineData += '</script>\n';
 
-    var existing = grunt.file.read('public/offline-index.html');
-    var splitSrc = existing.split('<script type="text/javascript">');
+    var existing = grunt.file.read('public/index.html');
+    
+    var src1 = existing.substring(0, existing.indexOf('<script type="text/javascript"'));
+    var src2 = existing.substring(existing.indexOf('<script type="text/javascript"'), existing.length);
 
-    var newSrc = splitSrc[0] + '\n' + allTheThings + '\n' + '<script type="text/javascript">' + splitSrc[1];
+    var newSrc = src1 + '\n' + offlineData + '\n' + src2;
 
     // add in some small print
-    /*var dateCollected = new Date();
+    var dateCollected = globalConfig.dateCollected;
 
     var months = [
       "January",
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
     small += dateCollected.getDate() + ' ' + months[dateCollected.getMonth()] + ' ' + dateCollected.getFullYear();
     small += '</small>';
 
-    var landmark = 'Powered by www.gov.uk/performance';
+    var landmark = 'www.gov.uk/performance';
 
     newSrc = newSrc.split(landmark);
 
@@ -160,8 +160,7 @@ module.exports = function(grunt) {
     finalSrc += newSrc[newSrc.length-1];
     
 
-    grunt.file.write('public/offline-index.html', finalSrc);
-    */
+    grunt.file.write('public/offline-version.html', finalSrc);
 
   });
 
@@ -169,14 +168,12 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('offline', 'Creates a single html file with everything inlined.', function() {
-    grunt.log.writeln('Beginning offline build.');
-
-    grunt.log.writeln('Inlining...');
-    grunt.task.run('smoosher');
-
     grunt.log.writeln('Downloading and appending JSON data...');
     grunt.task.run('curl');
     grunt.task.run('appendData');
+
+    grunt.log.writeln('Inlining...');
+    grunt.task.run('smoosher');
   });
 
 //////////////////////////////////////////////////////////////////////////////////////////
