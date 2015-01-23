@@ -73,7 +73,7 @@ var init = function() {
     flipCards.push($this);
   });
 
-  var flipTiming = window.setInterval(resetFlipCard, 5*1000);
+  //var flipTiming = window.setInterval(resetFlipCard, 5*1000);
 
 };
 

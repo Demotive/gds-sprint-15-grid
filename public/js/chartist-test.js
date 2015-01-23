@@ -1,7 +1,18 @@
-// https://www.gov.uk/performance/lasting-power-of-attorney/user-satisfaction
+/*// https://www.gov.uk/performance/lasting-power-of-attorney/user-satisfaction
 new Chartist.Pie('.graph-0',
   {
     series: [90, 10]
+  },
+  {
+    showLabel: false,
+    chartPadding: 0
+  }
+);*/
+
+// https://www.gov.uk/performance/register-to-vote/user-satisfaction
+new Chartist.Pie('.graph-register-to-vote',
+  {
+    series: [93.2, 6.8]
   },
   {
     showLabel: false,
@@ -12,7 +23,7 @@ new Chartist.Pie('.graph-0',
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // https://www.gov.uk/performance/renew-patent/digital-takeup
-new Chartist.Pie('.graph-1',
+new Chartist.Pie('.graph-renew-a-patent',
   {
     series: [94.1, 5.9]
   },
@@ -25,7 +36,7 @@ new Chartist.Pie('.graph-1',
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // https://www.gov.uk/performance/carers-allowance/user-satisfaction
-new Chartist.Pie('.graph-2',
+new Chartist.Pie('.graph-carers-allowance',
   {
     series: [90.9, 9.1]
   },
@@ -43,15 +54,17 @@ var deviceData = {
   series: [59.4, 21.3, 19.3]
 };
 
-new Chartist.Pie('.graph-3', deviceData, {
+new Chartist.Pie('.graph-prison-visits', deviceData, {
   showLabel: false,
   chartPadding: 0
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+// KILL
+
 //https://www.gov.uk/performance/pay-register-birth-abroad/user-satisfaction
-new Chartist.Pie('.graph-4',
+/*new Chartist.Pie('.graph-register-birth-abroad',
   {
     series: [86.7, 13.3]
   },
@@ -59,12 +72,14 @@ new Chartist.Pie('.graph-4',
     showLabel: false,
     chartPadding: 0
   }
-);
+);*/
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+// KILL
+
 //https://www.gov.uk/performance/registered-traveller/user-satisfaction
-new Chartist.Pie('.graph-5',
+/*new Chartist.Pie('.graph-registered-traveller',
   {
     series: [90, 10]
   },
@@ -72,25 +87,12 @@ new Chartist.Pie('.graph-5',
     showLabel: false,
     chartPadding: 0
   }
-);
-
-/*new Chartist.Line('.graph-5', lineData, {
-  axisX : {
-    //showLabel: false,
-    showGrid: false
-  },
-  axisY : {
-    //showLabel: false,
-    showGrid: false
-  },
-  showPoint: false,
-  chartPadding: 0
-});*/
+);*/
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
 // https://www.gov.uk/performance/sorn/digital-takeup
-new Chartist.Pie('.graph-6',
+new Chartist.Pie('.graph-sorn',
   {
     series: [86.4, 13.6]
   },
@@ -102,8 +104,10 @@ new Chartist.Pie('.graph-6',
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+// KILL
+
 // https://www.gov.uk/performance/register-to-vote/user-satisfaction
-new Chartist.Pie('.graph-7',
+/*new Chartist.Pie('.graph-register-to-vote',
   {
     series: [93.4, 6.6]
   },
@@ -111,7 +115,7 @@ new Chartist.Pie('.graph-7',
     showLabel: false,
     chartPadding: 0
   }
-);
+);*/
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -120,7 +124,7 @@ var govukDevices = {
   labels: ['Desktop', 'Mobile', 'Tablet'],
   series: [62.3, 25.1, 12.6]
 };
-new Chartist.Pie('.graph-8', govukDevices, {
+new Chartist.Pie('.graph-govuk', govukDevices, {
   showLabel: false,
   chartPadding: 0
 });
@@ -135,7 +139,7 @@ var lineData = {
   ]
 };
 
-new Chartist.Line('.graph-9', lineData, {
+new Chartist.Line('.graph-service-assessments', lineData, {
   axisX : {
     //showLabel: false,
     showGrid: false
