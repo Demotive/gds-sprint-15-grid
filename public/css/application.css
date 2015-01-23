@@ -621,4 +621,7 @@ img {
     text-align: center;
     white-space: nowrap; }
 
+.offline-demo {
+  display: block; }
+
 /*# sourceMappingURL=application.css.map */

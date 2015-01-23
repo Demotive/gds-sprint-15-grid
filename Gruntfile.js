@@ -144,7 +144,7 @@ module.exports = function(grunt) {
       "December"
     ];
 
-    var small = '<small class="offline-demo">This offline demo uses data collected on ';
+    var small = '<small class="offline-demo">Offline: data collected on ';
     small += dateCollected.getDate() + ' ' + months[dateCollected.getMonth()] + ' ' + dateCollected.getFullYear();
     small += '</small>';
 
