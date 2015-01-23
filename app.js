@@ -24,6 +24,10 @@ app.get('/', function(request, response) {
 
 // ----------------------------------------------------------------------------
 
+// REALTIME QUERIES
+
+// ----------------------------------------------------------------------------
+
 // standardised realtime query - returns single latest result
 var realtimeQuery = '/realtime?flatten=true&limit=1&sort_by=_timestamp%3Adescending';
 
@@ -88,6 +92,22 @@ app.get('/licensing/realtime', function (req, res) {
 
 // ----------------------------------------------------------------------------
 
+// GOVUK vistors and devices - To do. No time now.
+
+// ----------------------------------------------------------------------------
+
+/*
+app.get('/govuk/weekly', function(req, res) {
+  request(service + 'govuk/visitors?duration=1&collect=visitors%3Asum&group_by=website&period=week', function (error, response, serviceData) {
+    if (!error && response.statusCode == 200) {
+      var parsed = JSON.parse(serviceData);
+      res.json(parsed.data[0]['visitors:sum']);
+    } else {
+      res.json(failure);
+    }
+  });
+});
+
 // govuk by device (last week)
 app.get('/govuk/devices', function (req, res) {
   var query = service + 'govuk/devices?duration=1&collect=visitors%3Asum&group_by=deviceCategory&period=week';
@@ -111,6 +131,7 @@ app.get('/govuk/devices', function (req, res) {
     }
   });
 });
+*/
 
 
 // ----------------------------------------------------------------------------
