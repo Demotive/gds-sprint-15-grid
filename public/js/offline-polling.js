@@ -51,41 +51,53 @@ if (typeof offline !== 'undefined') {
     }
   ];
 
+  function pad(value) {
+    if(value < 10) {
+        return '0' + value;
+    } else {
+        return value;
+    }
+  }
+
   var updateUsersOffline = function() {
 
     var now = new Date;
     now.setTime(Date.now());
-    var hour = now.getHours();
-    var min = now.getMinutes();
+    var hour = pad(now.getHours());
+    var min = pad(now.getMinutes());
     var tempDate = new Date;
 
     // for each of the JSON blocks
     for (var i=0; i<offlineServices.length; i++) {
 
+      //console.log(offlineServices[i].selector);
+
       // loop through the data set and match the time as closely as possible.
       var data = offlineServices[i].jsonData['data'];
 
-      for (var c = 0; c < data.length; c++) {
+      //for (var c = 0; c < data.length; c++) {
+      for (var c = data.length-1; c >= 0; c--) {
 
         tempDate.setTime(Date.parse(data[c]._timestamp));
-        tempHour = tempDate.getHours();
+        tempHour = pad(tempDate.getHours());
 
         if (tempHour === hour) {
-          tempMin = tempDate.getMinutes();
+          tempMin = pad(tempDate.getMinutes());
           if (tempMin === min) {
             counter = c;
+            //console.log('MATCH - json: ' + tempHour + ':' + tempMin);
             break;
           }
           // catch and go back 1 if we've shot over the nearest minutes
           if (tempMin > min) {
             counter = c-1;
+            //console.log('MATCH with a rewind - json: ' + tempHour + ':' + tempMin);
             break;
           }
         }
 
       }
       
-      //console.log(data[counter]['unique_visitors']);
       $(offlineServices[i].selector).text(addCommas(data[counter]['unique_visitors']));
 
     }
