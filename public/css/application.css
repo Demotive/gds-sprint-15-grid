@@ -539,12 +539,12 @@ img {
     backface-visibility: hidden; }
   .flip-card .front-face {
     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+  .flip-card .back-face {
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg); }
-  .flip-card .back-face {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d; }
 
 .front-face, .govuk {
   display: -webkit-flex;
@@ -570,12 +570,12 @@ img {
     display: table-cell;
     vertical-align: middle;
     width: 50%;
-    padding: 2% 4% 0 4%; }
+    padding: 0 4%; }
   .pie-container .cell-right {
     display: table-cell;
     vertical-align: middle;
     width: 50%;
-    padding: 2% 4% 0 0; }
+    padding: 0 4% 0 0; }
 
 .pie-key {
   margin-top: 2vh;
@@ -596,6 +596,26 @@ img {
   padding: 2% 4%; }
   .line-container .ct-chart {
     height: 70%; }
+
+.icon-container {
+  display: table;
+  height: 100%; }
+  .icon-container .cell-left {
+    display: table-cell;
+    vertical-align: middle;
+    width: 40%;
+    padding: 0 4%; }
+  .icon-container .cell-right {
+    display: table-cell;
+    vertical-align: middle;
+    width: 60%;
+    padding: 0 4% 0 0; }
+
+.value {
+  font-size: 3.75vw; }
+
+.value + .title {
+  margin-top: -1vh; }
 
 .sprint-logo {
   display: -webkit-flex;
