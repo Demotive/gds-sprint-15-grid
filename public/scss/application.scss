@@ -171,7 +171,12 @@ img {
 
 .title {
   font-size: 1.5vw;
+
+  span {
+    font-weight: 400;
+  }
 }
+
 .figure {
   font-size: 4.5vw;
 }
@@ -207,6 +212,7 @@ img {
 
 .pie-key {
   margin-top: 2vh;
+  font-weight: 400;
 }
 .pie-value {
   font-size: 3.75vw;
