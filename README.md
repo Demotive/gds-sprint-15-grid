@@ -19,7 +19,10 @@ For the time being, packages are in this repo. So at the moment it's a case of `
 
 ==========
 
-Items to check and update on 02.01.15
+### Hard-coded data
+
+Items to check and update, because they are currently hard coded.
+To do: make these dynamic.
 
 GOV.UK visitors last week
 https://www.gov.uk/performance/site-activity/site-traffic
@@ -53,3 +56,16 @@ https://www.gov.uk/performance/site-activity/device-type
 
 Service assessment pass rate
 https://www.gov.uk/performance/digital-by-default-service-assessments/service-assessment-pass-rate
+
+### Sprint 15 facts
+
+There are also 3 facts hard coded for Sprint 15 on 3rd February 2015
+
+Apply for Carer’s Allowance
+49% of questions removed
+
+GOV.UK Verify
+20,000 sign-ins
+
+Digital self-assessment
+1 million registered users
