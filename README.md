@@ -21,51 +21,51 @@ For the time being, packages are in this repo. So at the moment it's a case of `
 
 ### Hard-coded data
 
-Items to check and update, because they are currently hard coded.
+Items to check and update, because they are currently hard coded.<br>
 To do: make these dynamic.
 
-GOV.UK visitors last week
+GOV.UK visitors last week<br>
 https://www.gov.uk/performance/site-activity/site-traffic
 
-User satisfaction on LPA
+User satisfaction on LPA<br>
 https://www.gov.uk/performance/lasting-power-of-attorney/user-satisfaction
 
-Patent renewals digital take up
+Patent renewals digital take up<br>
 https://www.gov.uk/performance/renew-patent/digital-takeup
 
-Carers allowance user satisfaction
+Carers allowance user satisfaction<br>
 https://www.gov.uk/performance/carers-allowance/user-satisfaction
 
-Prison visits by device
+Prison visits by device<br>
 https://www.gov.uk/performance/prison-visits/device-type
 
-Register birth abroad satisfaction
+Register birth abroad satisfaction<br>
 https://www.gov.uk/performance/pay-register-birth-abroad/user-satisfaction
 
-Registered traveller user satisfaction
+Registered traveller user satisfaction<br>
 https://www.gov.uk/performance/registered-traveller/user-satisfaction
 
-SORN digital take up
+SORN digital take up<br>
 https://www.gov.uk/performance/sorn/digital-takeup
 
-Register to vote user satisfaction
+Register to vote user satisfaction<br>
 https://www.gov.uk/performance/register-to-vote/user-satisfaction
 
-GOV.UK visitors by device
+GOV.UK visitors by device<br>
 https://www.gov.uk/performance/site-activity/device-type
 
-Service assessment pass rate
+Service assessment pass rate<br>
 https://www.gov.uk/performance/digital-by-default-service-assessments/service-assessment-pass-rate
 
 ### Sprint 15 facts
 
 There are also 3 facts hard coded for Sprint 15 on 3rd February 2015
 
-Apply for Carer’s Allowance
+Apply for Carer’s Allowance<br>
 49% of questions removed
 
-GOV.UK Verify
+GOV.UK Verify<br>
 20,000 sign-ins
 
-Digital self-assessment
+Digital self-assessment<br>
 1 million registered users
