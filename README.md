@@ -21,7 +21,7 @@ For the time being, packages are in this repo. So at the moment it's a case of `
 
 ### Hard-coded data
 
-Items to check and update, because they are currently hard coded.<br>
+Items to check and update, because they are currently hard coded in ``` /public/index.html ```.<br>
 To do: make these dynamic.
 
 GOV.UK visitors last week<br>
@@ -43,7 +43,8 @@ GOV.UK visitors by device<br>
 https://www.gov.uk/performance/site-activity/device-type
 
 Service assessment pass rate<br>
-https://www.gov.uk/performance/digital-by-default-service-assessments/service-assessment-pass-rate
+https://www.gov.uk/performance/digital-by-default-service-assessments/service-assessment-pass-rate<br>
+(This is the ``` lineData ``` array in ``` /public/js/chartist-test.js ```)
 
 SORN digital take up<br>
 https://www.gov.uk/performance/sorn/digital-takeup
