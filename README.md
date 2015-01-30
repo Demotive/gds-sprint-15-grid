@@ -27,11 +27,8 @@ To do: make these dynamic.
 GOV.UK visitors last week<br>
 https://www.gov.uk/performance/site-activity/site-traffic
 
-User satisfaction on LPA<br>
-https://www.gov.uk/performance/lasting-power-of-attorney/user-satisfaction
-
-Patent renewals digital take up<br>
-https://www.gov.uk/performance/renew-patent/digital-takeup
+Register to vote user satisfaction<br>
+https://www.gov.uk/performance/register-to-vote/user-satisfaction
 
 Carers allowance user satisfaction<br>
 https://www.gov.uk/performance/carers-allowance/user-satisfaction
@@ -39,23 +36,17 @@ https://www.gov.uk/performance/carers-allowance/user-satisfaction
 Prison visits by device<br>
 https://www.gov.uk/performance/prison-visits/device-type
 
-Register birth abroad satisfaction<br>
-https://www.gov.uk/performance/pay-register-birth-abroad/user-satisfaction
-
-Registered traveller user satisfaction<br>
-https://www.gov.uk/performance/registered-traveller/user-satisfaction
-
-SORN digital take up<br>
-https://www.gov.uk/performance/sorn/digital-takeup
-
-Register to vote user satisfaction<br>
-https://www.gov.uk/performance/register-to-vote/user-satisfaction
+Patent renewals digital take up<br>
+https://www.gov.uk/performance/renew-patent/digital-takeup
 
 GOV.UK visitors by device<br>
 https://www.gov.uk/performance/site-activity/device-type
 
 Service assessment pass rate<br>
 https://www.gov.uk/performance/digital-by-default-service-assessments/service-assessment-pass-rate
+
+SORN digital take up<br>
+https://www.gov.uk/performance/sorn/digital-takeup
 
 ### Sprint 15 facts
 
