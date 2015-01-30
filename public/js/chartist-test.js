@@ -1,14 +1,3 @@
-/*// https://www.gov.uk/performance/lasting-power-of-attorney/user-satisfaction
-new Chartist.Pie('.graph-0',
-  {
-    series: [90, 10]
-  },
-  {
-    showLabel: false,
-    chartPadding: 0
-  }
-);*/
-
 // https://www.gov.uk/performance/register-to-vote/user-satisfaction
 new Chartist.Pie('.graph-register-to-vote',
   {
@@ -61,36 +50,6 @@ new Chartist.Pie('.graph-prison-visits', deviceData, {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-// KILL
-
-//https://www.gov.uk/performance/pay-register-birth-abroad/user-satisfaction
-/*new Chartist.Pie('.graph-register-birth-abroad',
-  {
-    series: [86.7, 13.3]
-  },
-  {
-    showLabel: false,
-    chartPadding: 0
-  }
-);*/
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
-// KILL
-
-//https://www.gov.uk/performance/registered-traveller/user-satisfaction
-/*new Chartist.Pie('.graph-registered-traveller',
-  {
-    series: [90, 10]
-  },
-  {
-    showLabel: false,
-    chartPadding: 0
-  }
-);*/
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
 // https://www.gov.uk/performance/sorn/digital-takeup
 new Chartist.Pie('.graph-sorn',
   {
@@ -101,21 +60,6 @@ new Chartist.Pie('.graph-sorn',
     chartPadding: 0
   }
 );
-
-/////////////////////////////////////////////////////////////////////////////////////////
-
-// KILL
-
-// https://www.gov.uk/performance/register-to-vote/user-satisfaction
-/*new Chartist.Pie('.graph-register-to-vote',
-  {
-    series: [93.4, 6.6]
-  },
-  {
-    showLabel: false,
-    chartPadding: 0
-  }
-);*/
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
