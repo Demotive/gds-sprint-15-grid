@@ -57,7 +57,7 @@ Apply for Carer’s Allowance<br>
 49% of questions removed
 
 GOV.UK Verify<br>
-20,000 sign-ins
+36,000 sign-ins
 
 Digital self-assessment<br>
 1 million registered users
