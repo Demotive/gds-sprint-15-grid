@@ -20,7 +20,7 @@
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-curl": "^2.1.0",
-    "grunt-html-smoosher": "git://github.com/Demotive/grunt-html-smoosher.git",
+    "grunt-html-smoosher-gds-dead": "git://github.com/gemmaleigh/grunt-html-smoosher#e86e5145e81e765c4c2425b212092c068e18b0e1",
     "grunt-nodemon": "^0.3.0"
   }
 }
