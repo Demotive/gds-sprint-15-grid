@@ -1,7 +1,7 @@
 // https://www.gov.uk/performance/register-to-vote/user-satisfaction
 new Chartist.Pie('.graph-register-to-vote',
   {
-    series: [93.2, 6.8]
+    series: [95.4, 4.6]
   },
   {
     showLabel: false,
@@ -14,7 +14,7 @@ new Chartist.Pie('.graph-register-to-vote',
 // https://www.gov.uk/performance/renew-patent/digital-takeup
 new Chartist.Pie('.graph-renew-a-patent',
   {
-    series: [94.1, 5.9]
+    series: [93.8, 6.2]
   },
   {
     showLabel: false,
@@ -27,7 +27,7 @@ new Chartist.Pie('.graph-renew-a-patent',
 // https://www.gov.uk/performance/carers-allowance/user-satisfaction
 new Chartist.Pie('.graph-carers-allowance',
   {
-    series: [90.9, 9.1]
+    series: [90.7, 9.3]
   },
   {
     showLabel: false,
@@ -40,7 +40,7 @@ new Chartist.Pie('.graph-carers-allowance',
 //https://www.gov.uk/performance/prison-visits/device-type
 var deviceData = {
   labels: ['Mobile', 'Desktop', 'Tablet'],
-  series: [59.4, 21.3, 19.3]
+  series: [60.2, 22.2, 17.6]
 };
 
 new Chartist.Pie('.graph-prison-visits', deviceData, {
@@ -53,7 +53,7 @@ new Chartist.Pie('.graph-prison-visits', deviceData, {
 // https://www.gov.uk/performance/sorn/digital-takeup
 new Chartist.Pie('.graph-sorn',
   {
-    series: [86.4, 13.6]
+    series: [90.1, 9.9]
   },
   {
     showLabel: false,
@@ -66,7 +66,7 @@ new Chartist.Pie('.graph-sorn',
 //https://www.gov.uk/performance/site-activity/device-type
 var govukDevices = {
   labels: ['Desktop', 'Mobile', 'Tablet'],
-  series: [62.3, 25.1, 12.6]
+  series: [57.5, 29.6, 12.9]
 };
 new Chartist.Pie('.graph-govuk', govukDevices, {
   showLabel: false,
@@ -77,9 +77,9 @@ new Chartist.Pie('.graph-govuk', govukDevices, {
 
 //https://www.gov.uk/performance/digital-by-default-service-assessments/service-assessment-pass-rate
 var lineData = {
-  labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  labels: ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
   series: [
-    [75, 100, 66.7, 57.1, 60, 45.5, 77.8, 72.7, 100]
+    [45.5, 77.8, 80, 87.5, 63.6, 71.4,75, 80]
   ]
 };
 

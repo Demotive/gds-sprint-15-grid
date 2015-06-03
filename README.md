@@ -49,7 +49,7 @@ https://www.gov.uk/performance/digital-by-default-service-assessments/service-as
 SORN digital take up<br>
 https://www.gov.uk/performance/sorn/digital-takeup
 
-### Sprint 15 facts
+### 4 June 2015 facts
 
 There are also 3 facts hard coded for Sprint 15 on 3rd February 2015
 
@@ -57,7 +57,7 @@ Apply for Carer’s Allowance<br>
 49% of questions removed
 
 GOV.UK Verify<br>
-36,000 sign-ins
+106,000 User sign ins
 
 Digital self-assessment<br>
 1 million registered users
