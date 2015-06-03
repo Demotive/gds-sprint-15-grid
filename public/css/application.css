@@ -628,7 +628,7 @@ img {
 .hashtag {
   display: -webkit-flex;
   display: flex;
-  font-size: 4.5vw; }
+  font-size: 3.5vw; }
   .hashtag > div {
     margin: auto; }
   .layout-9 .hashtag {
