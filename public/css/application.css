@@ -429,7 +429,7 @@ body {
   font-family: "nta", Arial, sans-serif;
   line-height: 1.31579;
   font-weight: 400;
-  background-color: #0b0c0c;
+  background-color: #fff;
   color: #fff;
   font-weight: 700; }
 
@@ -491,26 +491,8 @@ img {
   left: 75%;
   top: 66.6%; }
 
-.c0 {
-  background-color: #84994b; }
-
-.c1 {
-  background-color: #ed1c1a; }
-
-.c2 {
-  background-color: #f16724; }
-
-.c3 {
-  background-color: #fbb21b; }
-
-.c4 {
-  background-color: #5dbc69; }
-
-.c5 {
-  background-color: #33c0cc; }
-
-.c6 {
-  background-color: #d6317b; }
+.c0, .c1, .c2, .c3, .c4, .c5, .c6 {
+  background-color: #ff9900; }
 
 .container {
   width: 100%;
@@ -626,6 +608,7 @@ img {
     width: 80%; }
 
 .hashtag {
+  background-color: #ff9900;
   display: -webkit-flex;
   display: flex;
   font-size: 3.5vw; }
