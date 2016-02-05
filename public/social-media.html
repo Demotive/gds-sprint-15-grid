@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/social-media.css">
+  </head>
+  <body>
+    <div class="page">
+      <iframe src="/"></iframe>
+    </div>
+    <div class="page logo visible">
+      <h1 class="sprint16-logo">
+        <span class="sprint">Sprint</span>
+        <span class="thirteen">13</span>
+        <span class="fourteen">14</span>
+        <span class="fifteen">15</span>
+        <span class="sixteen">16</span>
+      </h1>
+    </div>
+    <script type="text/javascript">
+      var pages = document.querySelectorAll('.page'),
+          visibleIndex = 1;
+
+      setInterval(function() {
+        var current = pages[visibleIndex],
+            nextVisibleIndex = (visibleIndex + 1) % pages.length,
+            next = pages[nextVisibleIndex];
+
+        current.classList.remove('visible');
+        next.classList.add('visible');
+
+        visibleIndex = nextVisibleIndex;
+      }, 10000);
+    </script>
+  </body>
+</html>

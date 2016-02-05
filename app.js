@@ -20,6 +20,9 @@ app.get('', function(request, response) {
 app.get('/', function(request, response) {
     response.sendfile('./public/index.html');
 });
+app.get('/social-media', function(request, response) {
+    response.sendfile('./public/social-media.html');
+});
 
 
 // ----------------------------------------------------------------------------

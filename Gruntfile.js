@@ -26,7 +26,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'public/css/application.css': 'public/scss/application.scss'
+          'public/css/application.css': 'public/scss/application.scss',
+          'public/css/social-media.css': 'public/scss/social-media.scss'
         },
         options: {
           loadPath: 'node_modules/govuk_frontend_toolkit/stylesheets'
